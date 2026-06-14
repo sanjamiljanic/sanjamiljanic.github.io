@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sanja Miljanic — Actress · Model · Voice Over</title>
+<meta name="description" content="Sanja Miljanic — Stockholm-based actress, model and voice over artist. Screen credits include Beck, Maria Wern, Solsidan and Jönssonligan. Watch the showreel.">
+
+<!-- Open Graph / link preview (shown when the site is shared on social, email, messaging) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sanja Miljanic — Actress · Model · Voice Over">
+<meta property="og:description" content="Stockholm-based actress. Screen credits include Beck, Maria Wern, Solsidan and Jönssonligan.">
+<meta property="og:image" content="images/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sanja Miljanic — Actress">
+<meta name="twitter:description" content="Stockholm-based actress, model and voice over artist.">
+<meta name="twitter:image" content="images/hero.jpg">
+
+<!-- Structured data: tells search engines this is an actor/person -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Sanja Miljanic",
+  "jobTitle": "Actress",
+  "image": "images/hero.jpg",
+  "address": { "@type": "PostalAddress", "addressLocality": "Stockholm", "addressCountry": "SE" },
+  "knowsLanguage": ["Swedish", "English", "Serbo-Croatian", "Spanish"],
+  "sameAs": [
+    "https://instagram.com/sanja.miljanic",
+    "https://statist.se/medlemmar/431330-sanja"
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #080b11;
+    --bg-soft: #0e131c;
+    --ink: #eef1f5;
+    --ink-dim: #97a1b0;
+    --accent: #e0a96d;        /* warm key-light amber */
+    --accent-cool: #5b8edb;   /* blue rim-light (atmosphere) */
+    --line: rgba(238, 241, 245, 0.13);
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Jost', 'Helvetica Neue', sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-weight: 300;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+  }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+
+  /* ---------- Nav ---------- */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 6vw;
+    background: linear-gradient(to bottom, rgba(14,13,11,0.92), rgba(14,13,11,0.75) 70%, transparent);
+    backdrop-filter: blur(6px);
+  }
+  nav .logo {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+  nav ul {
+    display: flex;
+    gap: 2.2rem;
+    list-style: none;
+  }
+  nav ul a {
+    font-size: 0.78rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+    transition: color 0.25s;
+  }
+  nav ul a:hover { color: var(--accent); }
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    background: none;
+    border: 0;
+    cursor: pointer;
+  }
+  .nav-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--ink);
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  nav.open .nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  nav.open .nav-toggle span:nth-child(2) { opacity: 0; }
+  nav.open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* ---------- Hero ---------- */
+  header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 6vw;
+    position: relative;
+    overflow: hidden;
+  }
+  /* Full-bleed cinematic background photo */
+  header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(to bottom, rgba(8,11,17,0.55) 0%, rgba(8,11,17,0.35) 35%, rgba(8,11,17,0.85) 100%),
+      radial-gradient(ellipse 80% 70% at 70% 40%, transparent 30%, rgba(8,11,17,0.6) 100%),
+      url('images/hero.jpg') center 22% / cover no-repeat,
+      var(--bg);
+    z-index: -1;
+    /* subtle cinematic cool grade over the image */
+    filter: saturate(1.05) contrast(1.03);
+  }
+  /* fallback glow if photo is missing */
+  header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 60% 50% at 50% 40%, rgba(91,142,219,0.10), transparent 70%);
+    z-index: -1;
+    pointer-events: none;
+  }
+  .hero-kicker {
+    font-size: 0.8rem;
+    letter-spacing: 0.45em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.6rem;
+  }
+  h1 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(3rem, 9vw, 6.5rem);
+    line-height: 1.05;
+    letter-spacing: 0.04em;
+    text-shadow: 0 2px 40px rgba(0,0,0,0.6);
+  }
+  .hero-sub {
+    margin-top: 1.4rem;
+    font-size: clamp(0.85rem, 1.6vw, 1rem);
+    letter-spacing: 0.34em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+  }
+  .hero-sub span { color: var(--accent); padding: 0 0.55em; }
+  .hero-cta {
+    margin-top: 3rem;
+    display: inline-block;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 0.85rem 2.6rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    transition: background 0.3s, color 0.3s;
+  }
+  .hero-cta:hover { background: var(--accent); color: var(--bg); }
+  .scroll-hint {
+    position: absolute;
+    bottom: 2.2rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+    opacity: 0.7;
+  }
+
+  /* ---------- Sections ---------- */
+  section { padding: 6.5rem 6vw; }
+  .section-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.9rem;
+  }
+  h2 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(2rem, 4.5vw, 3.2rem);
+    line-height: 1.15;
+    margin-bottom: 2.5rem;
+  }
+  .inner { max-width: 1060px; margin: 0 auto; }
+
+  /* ---------- Showreel ---------- */
+  #showreel { background: var(--bg-soft); }
+  .reel-frame {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.4rem;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 1px solid var(--line);
+    background:
+      radial-gradient(ellipse 60% 60% at 50% 45%, rgba(91,142,219,0.12), transparent 70%),
+      var(--bg);
+    cursor: pointer;
+    transition: border-color 0.3s;
+  }
+  .reel-frame:hover { border-color: var(--accent); }
+  .reel-play {
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    border: 1px solid var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s, transform 0.3s;
+  }
+  .reel-frame:hover .reel-play { background: var(--accent); transform: scale(1.06); }
+  .reel-play::after {
+    content: "";
+    border-style: solid;
+    border-width: 12px 0 12px 20px;
+    border-color: transparent transparent transparent var(--accent);
+    margin-left: 5px;
+    transition: border-color 0.3s;
+  }
+  .reel-frame:hover .reel-play::after { border-left-color: var(--bg); }
+  .reel-label {
+    font-size: 0.78rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+  }
+  .reel-note {
+    margin-top: 1.2rem;
+    font-size: 0.85rem;
+    color: var(--ink-dim);
+  }
+
+  /* ---------- About ---------- */
+  .about-grid {
+    display: grid;
+    grid-template-columns: minmax(260px, 380px) 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+  .headshot {
+    aspect-ratio: 3 / 4;
+    background:
+      linear-gradient(160deg, rgba(91,142,219,0.10), transparent 55%),
+      url('images/headshot.jpg') center 15% / cover no-repeat,
+      var(--bg-soft);
+    border: 1px solid var(--line);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+    color: var(--ink-dim);
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 1rem;
+  }
+  .about-text p { margin-bottom: 1.3rem; color: var(--ink); }
+  .about-text p.dim { color: var(--ink-dim); }
+
+  .facts {
+    margin-top: 2.4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.2rem 2rem;
+    border-top: 1px solid var(--line);
+    padding-top: 2rem;
+  }
+  .facts div h4 {
+    font-size: 0.7rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+  }
+  .facts div p { font-size: 0.95rem; color: var(--ink-dim); }
+
+  /* ---------- Credits ---------- */
+  #credits { background: var(--bg-soft); }
+  .credit-group { margin-bottom: 3.2rem; }
+  .credit-group h3 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 1.5rem;
+    letter-spacing: 0.06em;
+    margin-bottom: 1.4rem;
+    color: var(--accent);
+  }
+  .credit-row {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 1rem 2rem;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--line);
+    align-items: baseline;
+  }
+  .credit-row .title { font-size: 1.02rem; font-weight: 400; }
+  .credit-row .role { color: var(--ink-dim); font-size: 0.9rem; text-align: right; }
+  .credit-row .role .co { color: var(--accent); opacity: 0.85; }
+  .credit-row .year { color: var(--accent); font-size: 0.85rem; letter-spacing: 0.1em; }
+  .credits-note {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: var(--ink-dim);
+    font-style: italic;
+  }
+  .vo-listen {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin-bottom: 1.4rem;
+    padding: 0.6rem 1.4rem;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    transition: background 0.3s, color 0.3s;
+  }
+  .vo-listen:hover { background: var(--accent); color: var(--bg); }
+
+  /* ---------- On Screen (series stills) ---------- */
+  .stills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap: 1.4rem;
+  }
+  .still {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background-color: var(--bg-soft);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid var(--line);
+    overflow: hidden;
+    filter: grayscale(0.3) brightness(0.82);
+    transition: filter 0.45s ease, transform 0.45s ease;
+  }
+  .still:hover { filter: none; transform: scale(1.01); }
+  .still .cap {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    padding: 2.4rem 1.3rem 1.1rem;
+    background: linear-gradient(to top, rgba(8,11,17,0.94) 10%, rgba(8,11,17,0.4) 65%, transparent);
+  }
+  .still .cap h4 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 1.3rem;
+    letter-spacing: 0.02em;
+    color: var(--ink);
+  }
+  .still .cap span {
+    display: block;
+    margin-top: 0.2rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  /* ---------- Gallery ---------- */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.2rem;
+  }
+  .gallery-grid .ph {
+    aspect-ratio: 3 / 4;
+    background-color: var(--bg-soft);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid var(--line);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: var(--ink-dim);
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1rem;
+    transition: transform 0.4s, filter 0.4s;
+    filter: grayscale(0.15) brightness(0.95);
+  }
+  .gallery-grid .ph:hover { transform: scale(1.015); filter: none; }
+
+  /* ---------- Contact ---------- */
+  #contact {
+    background: var(--bg-soft);
+    text-align: center;
+  }
+  #contact h2 { margin-bottom: 1.2rem; }
+  #contact .lead { color: var(--ink-dim); max-width: 540px; margin: 0 auto 2.5rem; }
+  .contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.4rem;
+  }
+  .contact-links a {
+    border: 1px solid var(--line);
+    padding: 0.8rem 2rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--ink);
+    transition: border-color 0.3s, color 0.3s;
+  }
+  .contact-links a:hover { border-color: var(--accent); color: var(--accent); }
+
+  footer {
+    padding: 2.5rem 6vw;
+    text-align: center;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+    border-top: 1px solid var(--line);
+  }
+
+  /* ---------- Mobile ---------- */
+  @media (max-width: 760px) {
+    .nav-toggle { display: flex; }
+    nav ul {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      gap: 0;
+      padding: 0 7vw;
+      background: rgba(8, 11, 17, 0.97);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      pointer-events: none;
+      transition: max-height 0.35s ease, opacity 0.25s ease, padding 0.35s ease;
+    }
+    nav.open ul {
+      max-height: 70vh;
+      opacity: 1;
+      pointer-events: auto;
+      padding: 0.5rem 7vw 1.4rem;
+    }
+    nav ul li { width: 100%; }
+    nav ul a {
+      display: block;
+      padding: 1rem 0;
+      font-size: 0.95rem;
+      border-bottom: 1px solid var(--line);
+    }
+    nav ul li:last-child a { border-bottom: 0; }
+    .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .credit-row { grid-template-columns: 1fr auto; }
+    .credit-row .role { grid-column: 1 / -1; text-align: left; margin-top: -0.4rem; }
+    section { padding: 4.5rem 7vw; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#top" class="logo">Sanja Miljanic</a>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul id="nav-menu">
+    <li><a href="#showreel">Showreel</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#credits">Credits</a></li>
+    <li><a href="#onscreen">On Screen</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<header id="top">
+  <p class="hero-kicker">Stockholm · Sweden</p>
+  <h1>Sanja Miljanic</h1>
+  <p class="hero-sub">Actress <span>·</span> Model <span>·</span> Voice Over</p>
+  <a class="hero-cta" href="#showreel">Watch Showreel</a>
+  <p class="scroll-hint">Scroll</p>
+</header>
+
+<section id="showreel">
+  <div class="inner">
+    <p class="section-label">Showreel</p>
+    <h2>Acting Showreel 2026</h2>
+    <a class="reel-frame" href="https://youtu.be/sRc_3ie35fM" target="_blank" rel="noopener" aria-label="Play showreel on YouTube">
+      <span class="reel-play" aria-hidden="true"></span>
+      <span class="reel-label">Play Showreel</span>
+    </a>
+    <p class="reel-note">Opens on <a href="https://youtu.be/sRc_3ie35fM" style="color: var(--accent);">YouTube</a>.</p>
+  </div>
+</section>
+
+<section id="about">
+  <div class="inner">
+    <p class="section-label">About</p>
+    <h2>Many roles.<br>One presence.</h2>
+    <div class="about-grid">
+      <div class="headshot" role="img" aria-label="Sanja Miljanic — headshot"></div>
+      <div class="about-text">
+        <p>My name is Sanja, and I'm an actress based in Stockholm. I have experience in film and television, including roles in several well-known series.</p>
+        <p>My main focus is screen acting. I'm especially drawn to emotionally charged scenes, complex characters and material with strong subtext. I enjoy working with vulnerability, tension and intensity, and I'm comfortable expressing emotion with both subtlety and presence on camera.</p>
+        <p>I have trained in film acting at Cinemantrix and taken courses at Calle Flygare. I'm currently in my third term of improvisational theatre, and this autumn I will continue with a six-month film acting course at Cinemantrix. I'm confident with both scripted material and improvisation, take direction well, and adapt easily to the tone and rhythm of a production.</p>
+        <p>Outside of acting, I'm very active and have a background in climbing and dance. This makes me comfortable with movement-based work and physically demanding roles, including scenes that require body awareness, coordination and intensity.</p>
+        <p class="dim">I speak Swedish, English and Serbo-Croatian fluently, with working proficiency in Spanish.</p>
+        <div class="facts">
+          <div><h4>Playing age</h4><p>22 – 39</p></div>
+          <div><h4>Height</h4><p>172 cm</p></div>
+          <div><h4>Hair / Eyes</h4><p>Brown / Brown</p></div>
+          <div><h4>Languages</h4><p>Swedish · English · Serbo-Croatian · Spanish</p></div>
+          <div><h4>Special Skills</h4><p>Dance · Climbing · Driver's licence</p></div>
+          <div><h4>Based in</h4><p>Stockholm, Sweden</p></div>
+          <div><h4>Training</h4><p>Film Acting — Cinemantrix<br>Courses — Calle Flygare<br>Improv Theatre (3rd term)</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="credits">
+  <div class="inner">
+    <p class="section-label">Selected Credits</p>
+    <h2>Film, Television &amp; Commercial</h2>
+
+    <div class="credit-group">
+      <h3>Television &amp; Film</h3>
+      <div class="credit-row"><span class="title">Beck</span><span class="role">Police Officer (recurring) <span class="co">· Filmlance</span></span><span class="year">2025–26</span></div>
+      <div class="credit-row"><span class="title">Maria Wern</span><span class="role">Nurse (speaking role) <span class="co">· Warner Bros.</span></span><span class="year">2026</span></div>
+      <div class="credit-row"><span class="title">Solsidan</span><span class="role">Featured — Luxury Spa Guest <span class="co">· FLX</span></span><span class="year">2025</span></div>
+      <div class="credit-row"><span class="title">Jönssonligan</span><span class="role">Journalist <span class="co">· FLX / SF Studios</span></span><span class="year">2025</span></div>
+      <div class="credit-row"><span class="title">Ute och Cyklar (Netflix)</span><span class="role">Featured (speaking role) <span class="co">· Yellow Bird</span></span><span class="year">2024</span></div>
+      <div class="credit-row"><span class="title">Allt och Eva</span><span class="role">Colleague to Lead <span class="co">· Warner Bros.</span></span><span class="year">2023</span></div>
+      <div class="credit-row"><span class="title">Den fjärde mannen</span><span class="role">Featured — Police Colleague <span class="co">· SVT</span></span><span class="year">2014</span></div>
+      <div class="credit-row"><span class="title">Wolves in Eden (short)</span><span class="role">Lead</span><span class="year">2013</span></div>
+    </div>
+
+    <div class="credit-group">
+      <h3>Commercial</h3>
+      <a class="vo-listen" href="https://youtu.be/aWFgnSlrqhw" target="_blank" rel="noopener">▶ Watch — Commercial Showreel</a>
+      <div class="credit-row"><span class="title">Glenfiddich Whisky</span><span class="role">Lead — Golfer <span class="co">· M SHOT</span></span><span class="year">2026</span></div>
+      <div class="credit-row"><span class="title">Legora</span><span class="role">Lead — Squash Player <span class="co">· Pin Creative</span></span><span class="year">2026</span></div>
+      <div class="credit-row"><span class="title">Ubrelvy</span><span class="role">Nurse <span class="co">· Mother Whale</span></span><span class="year">2026</span></div>
+      <div class="credit-row"><span class="title">SAS</span><span class="role">Lead — Couple <span class="co">· Åkestam Holst &amp; Bleck</span></span><span class="year">2023</span></div>
+      <div class="credit-row"><span class="title">IKEA</span><span class="role">Lead Couple <span class="co">· Camp David</span></span><span class="year">2024</span></div>
+      <div class="credit-row"><span class="title">Preem</span><span class="role">Featured Couple <span class="co">· Åkestam Holst</span></span><span class="year">2025</span></div>
+      <div class="credit-row"><span class="title">GARANT</span><span class="role">Couple <span class="co">· Slutet är nära</span></span><span class="year">2025</span></div>
+      <div class="credit-row"><span class="title">Lundhags</span><span class="role">Brand Storyteller (speaking) <span class="co">· Midnatt Media</span></span><span class="year">2025</span></div>
+      <div class="credit-row"><span class="title">Tryggsam</span><span class="role">Brand Spokesperson (speaking) <span class="co">· Soscal Media</span></span><span class="year">2025</span></div>
+      <div class="credit-row"><span class="title">UNICEF</span><span class="role">Lead <span class="co">· B-Reel</span></span><span class="year">2019</span></div>
+    </div>
+
+    <div class="credit-group">
+      <h3>Voice Over</h3>
+      <a class="vo-listen" href="https://youtu.be/f3BBWYuxOMU" target="_blank" rel="noopener">▶ Listen — Voice Over Showreel</a>
+      <div class="credit-row"><span class="title">SAVR</span><span class="role">Commercial Voice Over <span class="co">· Slutet är nära</span></span><span class="year">2024</span></div>
+      <div class="credit-row"><span class="title">Great Earth</span><span class="role">Commercial Voice Over <span class="co">· Soscal Media</span></span><span class="year">2025</span></div>
+      <div class="credit-row"><span class="title">Doz Apotek</span><span class="role">Commercial Voice Over <span class="co">· Slutet är nära</span></span><span class="year">2022</span></div>
+      <div class="credit-row"><span class="title">Kusträddarna</span><span class="role">Voice — First Lady Agent</span><span class="year">2022</span></div>
+    </div>
+
+    <div class="credit-group">
+      <h3>Music Video</h3>
+      <div class="credit-row"><span class="title">Justin Timberlake &amp; Michael Jackson</span><span class="role">“Love Never Felt So Good” — Dancer <span class="co">· Epic Records</span></span><span class="year">2014</span></div>
+      <div class="credit-row"><span class="title">First Aid Kit</span><span class="role">“Turning Onto You” <span class="co">· Columbia Records</span></span><span class="year">2022</span></div>
+      <div class="credit-row"><span class="title">Benjamin Ingrosso</span><span class="role">Ballerina <span class="co">· TEN Music Group</span></span><span class="year">2024</span></div>
+    </div>
+
+    <div class="credit-group">
+      <h3>Modelling</h3>
+      <div class="credit-row"><span class="title">Pinewood / Tripulse / Tuxer</span><span class="role">Collection &amp; Activewear Model</span><span class="year">2025</span></div>
+      <div class="credit-row"><span class="title">Norwegian Adventures</span><span class="role">Featured — Luxury Traveler</span><span class="year">2025</span></div>
+      <div class="credit-row"><span class="title">Lundhags / Jobman</span><span class="role">Collection Model</span><span class="year">2021–22</span></div>
+      <div class="credit-row"><span class="title">Carrera</span><span class="role">Eyewear Model <span class="co">· Bloomy</span></span><span class="year">2016</span></div>
+    </div>
+
+    <p class="credits-note">Selected credits — <a href="Sanja-Miljanic-CV.pdf" target="_blank" rel="noopener" style="color: var(--accent); font-style: normal;">download full CV (PDF)</a>.</p>
+  </div>
+</section>
+
+<section id="onscreen">
+  <div class="inner">
+    <p class="section-label">On Screen</p>
+    <h2>Screen Work</h2>
+    <div class="stills-grid">
+      <div class="still" role="img" aria-label="Sanja Miljanic in a scene from Allt och Eva (Warner Bros)" style="background-image:url('images/still-allt-och-eva.jpg')">
+        <div class="cap"><h4>Allt och Eva</h4><span>Warner Bros</span></div>
+      </div>
+      <div class="still" role="img" aria-label="Sanja Miljanic in a scene from Den fjärde mannen (SVT)" style="background-image:url('images/still-fjarde-mannen.jpg')">
+        <div class="cap"><h4>Den fjärde mannen</h4><span>SVT</span></div>
+      </div>
+      <div class="still" role="img" aria-label="Sanja Miljanic in a scene study at Cinemantrix" style="background-image:url('images/still-cinemantrix.jpg')">
+        <div class="cap"><h4>Cinemantrix</h4><span>Scene study</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="inner">
+    <p class="section-label">Gallery</p>
+    <h2>Headshots &amp; Stills</h2>
+    <div class="gallery-grid">
+      <div class="ph" role="img" aria-label="Sanja Miljanic — cinematic portrait" style="background-image:url('images/gallery-1.jpg'); background-position:center 25%"></div>
+      <div class="ph" role="img" aria-label="Sanja Miljanic — dramatic portrait" style="background-image:url('images/gallery-2.jpg'); background-position:center 20%"></div>
+      <div class="ph" role="img" aria-label="Sanja Miljanic in character as a police officer" style="background-image:url('images/gallery-3.jpg'); background-position:center 18%"></div>
+      <div class="ph" role="img" aria-label="Sanja Miljanic — full-length modelling portfolio" style="background-image:url('images/gallery-4.jpg'); background-position:center top"></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="inner">
+    <p class="section-label">Contact</p>
+    <h2>Let's work together</h2>
+    <p class="lead">For casting enquiries, bookings and full CV — get in touch directly or via my profiles below.</p>
+    <div class="contact-links">
+      <a id="email-link" data-user="sanja.miljanic" data-domain="yahoo.se" href="#contact">Email me</a>
+      <a href="https://instagram.com/sanja.miljanic" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://statist.se/medlemmar/431330-sanja" target="_blank" rel="noopener">Statist.se</a>
+      <a href="https://youtu.be/sRc_3ie35fM" target="_blank" rel="noopener">Showreel</a>
+    </div>
+    <p style="margin-top:1.8rem; font-size:0.82rem; letter-spacing:0.06em; color:var(--ink-dim);">Modelling representation — Stockholmsgruppen</p>
+  </div>
+</section>
+
+<footer>
+  © 2026 Sanja Miljanic — Actress · Model · Voice Over
+</footer>
+
+<script>
+  // Assemble the email at runtime so it isn't sitting in the raw HTML for spam bots.
+  (function () {
+    var a = document.getElementById('email-link');
+    if (!a) return;
+    var address = a.getAttribute('data-user') + '@' + a.getAttribute('data-domain');
+    a.href = 'mailto:' + address;
+    a.textContent = address;
+  })();
+
+  // Mobile navigation: toggle the menu and close it after a link is tapped.
+  (function () {
+    var nav = document.querySelector('nav');
+    var toggle = document.getElementById('nav-toggle');
+    var menu = document.getElementById('nav-menu');
+    if (!nav || !toggle || !menu) return;
+    function setOpen(open) {
+      nav.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+    toggle.addEventListener('click', function () {
+      setOpen(!nav.classList.contains('open'));
+    });
+    menu.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') setOpen(false);
+    });
+  })();
+</script>
+
+</body>
+</html>
